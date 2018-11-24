@@ -7,10 +7,7 @@ path="res://.import/right_arrow.png-3bc5ae3adadf5f8a7721160c9a7b4cb6.stex"
 [deps]
 
 source_file="res://addons/zylann.channel_packer/icons/right_arrow.png"
-source_md5="098094488ba725daa1d5ce3b6b63b44f"
-
 dest_files=[ "res://.import/right_arrow.png-3bc5ae3adadf5f8a7721160c9a7b4cb6.stex" ]
-dest_md5="3a2401d9f41dc2612e45b2b02ce98311"
 
 [params]
 

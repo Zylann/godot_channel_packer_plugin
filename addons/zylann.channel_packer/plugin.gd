@@ -6,6 +6,8 @@ const ChannelPacker = preload("dialog.tscn")
 const LoadTextureDialog = preload("load_texture_dialog.gd")
 
 var _channel_packer = null
+var _menu_button = null
+var _nodes_to_free_on_exit = []
 
 const MENU_SHOW = 0
 
@@ -29,11 +31,21 @@ func _enter_tree():
 #	menu.add_item("Show", MENU_SHOW)
 #	menu.connect("id_pressed", self, "_on_menu_id_pressed")
 #	add_tool_submenu_item("Channel packer", menu)
-	var menu_button = MenuButton.new()
-	menu_button.text = "Channel packer"
-	menu_button.get_popup().add_item("Show", MENU_SHOW)
-	menu_button.get_popup().connect("id_pressed", self, "_on_menu_id_pressed")
-	add_control_to_container(CONTAINER_TOOLBAR, menu_button)
+	_menu_button = MenuButton.new()
+	_menu_button.text = "Channel packer"
+	_menu_button.get_popup().add_item("Show", MENU_SHOW)
+	_menu_button.get_popup().connect("id_pressed", self, "_on_menu_id_pressed")
+	add_control_to_container(CONTAINER_TOOLBAR, _menu_button)
+	
+	_nodes_to_free_on_exit.append(_channel_packer)
+	_nodes_to_free_on_exit.append(load_texture_dialog)
+	_nodes_to_free_on_exit.append(_menu_button)
+
+
+func _exit_tree():
+	remove_control_from_container(CONTAINER_TOOLBAR, _menu_button)
+	for node in _nodes_to_free_on_exit:
+		node.queue_free()
 
 
 func _on_menu_id_pressed(id):

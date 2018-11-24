@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://addons/zylann.channel_packer/input_texture.gd" type="Script" id=1]
 [ext_resource path="res://addons/zylann.channel_packer/icons/empty.png" type="Texture" id=2]
-[ext_resource path="res://addons/zylann.channel_packer/icons/right_arrow.png" type="Texture" id=3]
+[ext_resource path="res://addons/zylann.channel_packer/icons/r.png" type="Texture" id=3]
+[ext_resource path="res://addons/zylann.channel_packer/icons/right_arrow.png" type="Texture" id=4]
+[ext_resource path="res://addons/zylann.channel_packer/icons/g.png" type="Texture" id=5]
+[ext_resource path="res://addons/zylann.channel_packer/icons/b.png" type="Texture" id=6]
+[ext_resource path="res://addons/zylann.channel_packer/icons/a.png" type="Texture" id=7]
 
 [node name="InputTexture" type="HBoxContainer"]
 
@@ -103,7 +107,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 66.0
-margin_right = 96.0
+margin_right = 102.0
 margin_bottom = 64.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -115,35 +119,13 @@ custom_constants/vseparation = 0
 columns = 2
 _sections_unfolded = [ "custom_constants" ]
 
-[node name="Label" type="Label" parent="Channels" index="0"]
+[node name="Label" type="TextureRect" parent="Channels" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 1.0
-margin_right = 10.0
-margin_bottom = 15.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "R"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="R" type="TextureRect" parent="Channels" index="1"]
-
-self_modulate = Color( 1, 0.12549, 0.12549, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 14.0
-margin_right = 30.0
+margin_right = 16.0
 margin_bottom = 16.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -153,27 +135,44 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 texture = ExtResource( 3 )
 stretch_mode = 0
+
+[node name="R" type="TextureRect" parent="Channels" index="1"]
+
+self_modulate = Color( 1, 0.12549, 0.12549, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 20.0
+margin_right = 36.0
+margin_bottom = 16.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 4 )
+stretch_mode = 0
 _sections_unfolded = [ "Visibility" ]
 
-[node name="Label2" type="Label" parent="Channels" index="2"]
+[node name="Label2" type="TextureRect" parent="Channels" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 17.0
-margin_right = 10.0
-margin_bottom = 31.0
+margin_top = 16.0
+margin_right = 16.0
+margin_bottom = 32.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-mouse_filter = 2
+mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "G"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 0
 
 [node name="G" type="TextureRect" parent="Channels" index="3"]
 
@@ -182,9 +181,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 14.0
+margin_left = 20.0
 margin_top = 16.0
-margin_right = 30.0
+margin_right = 36.0
 margin_bottom = 32.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -192,29 +191,27 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 stretch_mode = 0
 _sections_unfolded = [ "Rect", "Visibility" ]
 
-[node name="Label3" type="Label" parent="Channels" index="4"]
+[node name="Label3" type="TextureRect" parent="Channels" index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 33.0
-margin_right = 10.0
-margin_bottom = 47.0
+margin_top = 32.0
+margin_right = 16.0
+margin_bottom = 48.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-mouse_filter = 2
+mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "B"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+size_flags_vertical = 1
+texture = ExtResource( 6 )
+stretch_mode = 0
 
 [node name="B" type="TextureRect" parent="Channels" index="5"]
 
@@ -223,9 +220,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 14.0
+margin_left = 20.0
 margin_top = 32.0
-margin_right = 30.0
+margin_right = 36.0
 margin_bottom = 48.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -233,39 +230,18 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 stretch_mode = 0
 _sections_unfolded = [ "Rect", "Visibility" ]
 
-[node name="Label4" type="Label" parent="Channels" index="6"]
+[node name="Label4" type="TextureRect" parent="Channels" index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 49.0
-margin_right = 10.0
-margin_bottom = 63.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "A"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="A" type="TextureRect" parent="Channels" index="7"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 14.0
 margin_top = 48.0
-margin_right = 30.0
+margin_right = 16.0
 margin_bottom = 64.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -273,7 +249,26 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 3 )
+texture = ExtResource( 7 )
+stretch_mode = 0
+
+[node name="A" type="TextureRect" parent="Channels" index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 20.0
+margin_top = 48.0
+margin_right = 36.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 4 )
 stretch_mode = 0
 _sections_unfolded = [ "Rect", "Visibility" ]
 

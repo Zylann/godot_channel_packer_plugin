@@ -42,7 +42,7 @@ func _ready():
 	for i in range(4):
 		var node = _get_input_node(i)
 		node.connect("texture_path_changed", self, "_on_input_texture_changed", [i])
-	
+
 
 func set_load_texture_dialog(dialog):
 	for i in range(4):

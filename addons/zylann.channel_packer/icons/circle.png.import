@@ -7,10 +7,7 @@ path="res://.import/circle.png-17bd6b81e7934a74a3b3759e3e4cbd94.stex"
 [deps]
 
 source_file="res://addons/zylann.channel_packer/icons/circle.png"
-source_md5="3fb38a5eefb603b6e1d50690b0829b36"
-
 dest_files=[ "res://.import/circle.png-17bd6b81e7934a74a3b3759e3e4cbd94.stex" ]
-dest_md5="ce8c4cb6dbb1fdb6e0f876b8d2e9a621"
 
 [params]
 
