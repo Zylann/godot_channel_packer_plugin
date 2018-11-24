@@ -55,6 +55,11 @@ func _notification(what):
 		if visible == false:
 			#_reset_mappings()
 			_reset_textures()
+		else:
+			# TODO Awful fix to https://github.com/godotengine/godot/issues/23940
+			yield(get_tree(), "idle_frame")
+			yield(get_tree(), "idle_frame")
+			update()
 
 
 func _on_input_texture_changed(file_path, i):
