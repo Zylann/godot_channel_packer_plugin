@@ -9,9 +9,9 @@ const PRESET_ONE_PER_CHANNEL = 2
 const _channel_to_index = {"r": 0, "g": 1, "b": 2, "a": 3}
 
 
-onready var _preset_selector = get_node("VBoxContainer/HBoxContainer/Middle/PresetSelector")
-onready var _output_node = get_node("VBoxContainer/HBoxContainer/Output/CenterContainer/Output")
-onready var _save_file_dialog = get_node("SaveFileDialog")
+onready var _preset_selector = $VBoxContainer/HBoxContainer/Middle/PresetSelector
+onready var _output_node = $VBoxContainer/HBoxContainer/Output/CenterContainer/Output
+onready var _save_file_dialog = $SaveFileDialog
 
 var _config = {
 	"input":[
@@ -67,7 +67,7 @@ func _on_input_texture_changed(file_path, i):
 
 
 func _get_input_node(i):
-	var inputs = get_node("VBoxContainer/HBoxContainer/Inputs")
+	var inputs = $VBoxContainer/HBoxContainer/Inputs
 	return inputs.get_node("InputTexture" + str(i))
 
 

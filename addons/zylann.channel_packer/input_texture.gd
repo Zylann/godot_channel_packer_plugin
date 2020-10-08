@@ -6,9 +6,9 @@ const _index_to_channel = ["r", "g", "b", "a"]
 
 signal texture_path_changed(file_path)
 
-onready var _texture_preview = get_node("TextureRect")
-onready var _load_button = get_node("TextureRect/LoadButton")
-onready var _clear_button = get_node("TextureRect/ClearButton")
+onready var _texture_preview = $TextureRect
+onready var _load_button = $TextureRect/LoadButton
+onready var _clear_button = $TextureRect/ClearButton
 
 var _load_texture_dialog = null
 var _empty_texture = preload("icons/empty.png")
